@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 106, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/nirma/OneDrive/Desktop/PROJECTS/coffee-store/src/app/api/auth/%5B...nextauth%5D/route.ts"],"sourcesContent":["import NextAuth from \"next-auth\";\r\n     import GoogleProvider from \"next-auth/providers/google\";\r\n     \r\n     const handler = NextAuth({\r\n       providers: [\r\n         GoogleProvider({\r\n           clientId: process.env.GOOGLE_CLIENT_ID as string,\r\n           clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,\r\n         }),\r\n      ],\r\n});\r\n\r\nexport { handler as GET, handler as POST };"],"names":[],"mappings":";;;;;;AAAA;AACK;;;AAEA,MAAM,UAAU,IAAA,wMAAQ,EAAC;IACvB,WAAW;QACT,IAAA,sNAAc,EAAC;YACb,UAAU,QAAQ,GAAG,CAAC,gBAAgB;YACtC,cAAc,QAAQ,GAAG,CAAC,oBAAoB;QAChD;KACF;AACP"}}]
+}

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
      const MiniMenu = () => {
        return (
-        <div className="flex space-x-6  p-6 justify-center bg-amber-900/30  backdrop-blur-sm">
+        <div className="flex space-x-6  p-6 justify-center bg-white  backdrop-blur-sm">
            
         
             <a href="/hot-coffee"className="flex flex-col items-center px-4 py-3  text-amber-900 text-lg font-medium rounded-md shadow-md hover:bg-amber-600 transition-all duration-200">
