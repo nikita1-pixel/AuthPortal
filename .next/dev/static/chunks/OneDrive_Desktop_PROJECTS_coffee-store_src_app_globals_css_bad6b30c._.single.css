@@ -80,12 +80,9 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
     --tracking-tight: -.025em;
     --radius-md: .375rem;
     --radius-lg: .5rem;
@@ -1089,116 +1086,252 @@
   }
 
   @layer daisyui.component {
-    .range {
+    .select {
+      border: var(--border) solid #0000;
       appearance: none;
-      webkit-appearance: none;
-      --range-thumb: var(--color-base-100);
-      --range-thumb-size: calc(var(--size-selector, .25rem) * 6);
-      --range-progress: currentColor;
-      --range-fill: 1;
-      --range-p: .25rem;
-      --range-bg: currentColor;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .range {
-        --range-bg: color-mix(in oklab, currentColor 10%, #0000);
-      }
-    }
-
-    .range {
-      cursor: pointer;
+      background-color: var(--color-base-100);
       vertical-align: middle;
-      --radius-selector-max: calc(var(--radius-selector)  + var(--radius-selector)  + var(--radius-selector));
-      border-radius: calc(var(--radius-selector)  + min(var(--range-p), var(--radius-selector-max)));
       width: clamp(3rem, 20rem, 100%);
-      height: var(--range-thumb-size);
-      background-color: #0000;
-      border: none;
+      height: var(--size);
+      touch-action: manipulation;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      box-shadow: 0 1px var(--input-color) inset, 0 -1px oklch(100% 0 0 / calc(var(--depth) * .1)) inset;
+      background-image: linear-gradient(45deg, #0000 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, #0000 50%);
+      background-position: calc(100% - 20px) calc(1px + 50%), calc(100% - 16.1px) calc(1px + 50%);
+      background-repeat: no-repeat;
+      background-size: 4px 4px, 4px 4px;
+      border-start-start-radius: var(--join-ss, var(--radius-field));
+      border-start-end-radius: var(--join-se, var(--radius-field));
+      border-end-end-radius: var(--join-ee, var(--radius-field));
+      border-end-start-radius: var(--join-es, var(--radius-field));
+      flex-shrink: 1;
+      align-items: center;
+      gap: .375rem;
+      padding-inline: .75rem 1.75rem;
+      font-size: .875rem;
+      display: inline-flex;
+      position: relative;
       overflow: hidden;
     }
 
-    [dir="rtl"] .range {
-      --range-dir: -1;
+    @supports (color: color-mix(in lab, red, red)) {
+      .select {
+        box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset, 0 -1px oklch(100% 0 0 / calc(var(--depth) * .1)) inset;
+      }
     }
 
-    .range:focus {
-      outline: none;
+    .select {
+      border-color: var(--input-color);
+      --input-color: var(--color-base-content);
     }
 
-    .range:focus-visible {
-      outline-offset: 2px;
-      outline: 2px solid;
+    @supports (color: color-mix(in lab, red, red)) {
+      .select {
+        --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+      }
     }
 
-    .range::-webkit-slider-runnable-track {
-      background-color: var(--range-bg);
-      border-radius: var(--radius-selector);
-      width: 100%;
-      height: calc(var(--range-thumb-size) * .5);
+    .select {
+      --size: calc(var(--size-field, .25rem) * 10);
+    }
+
+    [dir="rtl"] .select {
+      background-position: 12px calc(1px + 50%), 16px calc(1px + 50%);
+    }
+
+    [dir="rtl"] .select::picker(select) {
+      translate: .5rem;
+    }
+
+    [dir="rtl"] .select select::picker(select) {
+      translate: .5rem;
+    }
+
+    .select[multiple] {
+      background-image: none;
+      height: auto;
+      padding-block: .75rem;
+      padding-inline-end: .75rem;
+      overflow: auto;
+    }
+
+    .select select {
+      appearance: none;
+      width: calc(100% + 2.75rem);
+      height: calc(100% - calc(var(--border) * 2));
+      background: inherit;
+      border-radius: inherit;
+      border-style: none;
+      align-items: center;
+      margin-inline: -.75rem -1.75rem;
+      padding-inline: .75rem 1.75rem;
+    }
+
+    .select select:focus, .select select:focus-within {
+      --tw-outline-style: none;
+      outline-style: none;
     }
 
     @media (forced-colors: active) {
-      .range::-webkit-slider-runnable-track {
-        border: 1px solid;
-      }
-
-      .range::-moz-range-track {
-        border: 1px solid;
+      .select select:focus, .select select:focus-within {
+        outline-offset: 2px;
+        outline: 2px solid #0000;
       }
     }
 
-    .range::-webkit-slider-thumb {
-      box-sizing: border-box;
-      border-radius: calc(var(--radius-selector)  + min(var(--range-p), var(--radius-selector-max)));
-      height: var(--range-thumb-size);
-      width: var(--range-thumb-size);
-      border: var(--range-p) solid;
-      appearance: none;
-      webkit-appearance: none;
-      color: var(--range-progress);
-      box-shadow: 0 -1px oklch(0% 0 0 / calc(var(--depth) * .1)) inset, 0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * .1)) inset, 0 1px currentColor, 0 0 0 2rem var(--range-thumb) inset, calc((var(--range-dir, 1) * -100rem)  - (var(--range-dir, 1) * var(--range-thumb-size) / 2)) 0 0 calc(100rem * var(--range-fill));
-      background-color: currentColor;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
+    .select select:not(:last-child) {
+      background-image: none;
+      margin-inline-end: -1.375rem;
+    }
+
+    .select:focus, .select:focus-within {
+      --input-color: var(--color-base-content);
+      box-shadow: 0 1px var(--input-color);
     }
 
     @supports (color: color-mix(in lab, red, red)) {
-      .range::-webkit-slider-thumb {
-        box-shadow: 0 -1px oklch(0% 0 0 / calc(var(--depth) * .1)) inset, 0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * .1)) inset, 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000), 0 0 0 2rem var(--range-thumb) inset, calc((var(--range-dir, 1) * -100rem)  - (var(--range-dir, 1) * var(--range-thumb-size) / 2)) 0 0 calc(100rem * var(--range-fill));
+      .select:focus, .select:focus-within {
+        box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
       }
     }
 
-    .range::-moz-range-track {
-      background-color: var(--range-bg);
-      border-radius: var(--radius-selector);
-      width: 100%;
-      height: calc(var(--range-thumb-size) * .5);
+    .select:focus, .select:focus-within {
+      outline: 2px solid var(--input-color);
+      outline-offset: 2px;
+      isolation: isolate;
+      z-index: 1;
     }
 
-    .range::-moz-range-thumb {
-      box-sizing: border-box;
-      border-radius: calc(var(--radius-selector)  + min(var(--range-p), var(--radius-selector-max)));
-      height: var(--range-thumb-size);
-      width: var(--range-thumb-size);
-      border: var(--range-p) solid;
-      color: var(--range-progress);
-      box-shadow: 0 -1px oklch(0% 0 0 / calc(var(--depth) * .1)) inset, 0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * .1)) inset, 0 1px currentColor, 0 0 0 2rem var(--range-thumb) inset, calc((var(--range-dir, 1) * -100rem)  - (var(--range-dir, 1) * var(--range-thumb-size) / 2)) 0 0 calc(100rem * var(--range-fill));
-      background-color: currentColor;
-      position: relative;
-      top: 50%;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .range::-moz-range-thumb {
-        box-shadow: 0 -1px oklch(0% 0 0 / calc(var(--depth) * .1)) inset, 0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * .1)) inset, 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000), 0 0 0 2rem var(--range-thumb) inset, calc((var(--range-dir, 1) * -100rem)  - (var(--range-dir, 1) * var(--range-thumb-size) / 2)) 0 0 calc(100rem * var(--range-fill));
-      }
-    }
-
-    .range:disabled {
+    .select:is(:disabled, [disabled]), fieldset:disabled .select {
       cursor: not-allowed;
-      opacity: .3;
+      border-color: var(--color-base-200);
+      background-color: var(--color-base-200);
+      color: var(--color-base-content);
+    }
+
+    .select:has( > select[disabled]) {
+      cursor: not-allowed;
+      border-color: var(--color-base-200);
+      background-color: var(--color-base-200);
+      color: var(--color-base-content);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .select:has( > select[disabled]) {
+        color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+      }
+    }
+
+    .select:has( > select[disabled])::placeholder {
+      color: var(--color-base-content);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .select:has( > select[disabled])::placeholder {
+        color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+      }
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .select:is(:disabled, [disabled]), fieldset:disabled .select {
+        color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+      }
+    }
+
+    :is(.select:is(:disabled, [disabled]), fieldset:disabled .select)::placeholder {
+      color: var(--color-base-content);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      :is(.select:is(:disabled, [disabled]), fieldset:disabled .select)::placeholder {
+        color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+      }
+    }
+
+    .select:has( > select[disabled]) > select[disabled] {
+      cursor: not-allowed;
+    }
+
+    @supports (appearance: base-select) {
+      .select, .select select {
+        appearance: base-select;
+      }
+
+      :is(.select, .select select)::picker(select) {
+        appearance: base-select;
+      }
+    }
+
+    :is(.select, .select select)::picker(select) {
+      color: inherit;
+      border: var(--border) solid var(--color-base-200);
+      border-radius: var(--radius-box);
+      background-color: inherit;
+      max-height: min(24rem, 70dvh);
+      box-shadow: 0 2px calc(var(--depth) * 3px) -2px #0003;
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * .1)), 0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * .1));
+      margin-block: .5rem;
+      margin-inline: .5rem;
+      padding: .5rem;
+      translate: -.5rem;
+    }
+
+    @supports (color: lab(0% 0 0)) {
+      :is(.select, .select select)::picker(select) {
+        box-shadow: 0 2px calc(var(--depth) * 3px) -2px lab(0% 0 0 / .2);
+      }
+    }
+
+    :is(.select, .select select)::picker-icon {
+      display: none;
+    }
+
+    :is(.select, .select select) optgroup {
+      padding-top: .5em;
+    }
+
+    :is(.select, .select select) optgroup option:first-child {
+      margin-top: .5em;
+    }
+
+    :is(.select, .select select) option {
+      border-radius: var(--radius-field);
+      white-space: normal;
+      padding-block: .375rem;
+      padding-inline: .75rem;
+      transition-property: color, background-color;
+      transition-duration: .2s;
+      transition-timing-function: cubic-bezier(0, 0, .2, 1);
+    }
+
+    :is(.select, .select select) option:not(:disabled):hover, :is(.select, .select select) option:not(:disabled):focus-visible {
+      cursor: pointer;
+      background-color: var(--color-base-content);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      :is(.select, .select select) option:not(:disabled):hover, :is(.select, .select select) option:not(:disabled):focus-visible {
+        background-color: color-mix(in oklab, var(--color-base-content) 10%, transparent);
+      }
+    }
+
+    :is(.select, .select select) option:not(:disabled):hover, :is(.select, .select select) option:not(:disabled):focus-visible {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+
+    @media (forced-colors: active) {
+      :is(.select, .select select) option:not(:disabled):hover, :is(.select, .select select) option:not(:disabled):focus-visible {
+        outline-offset: 2px;
+        outline: 2px solid #0000;
+      }
+    }
+
+    :is(.select, .select select) option:not(:disabled):active {
+      background-color: var(--color-neutral);
+      color: var(--color-neutral-content);
+      box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
     }
   }
 
@@ -1497,10 +1630,6 @@
     margin-bottom: calc(var(--spacing) * 8);
   }
 
-  .mb-12 {
-    margin-bottom: calc(var(--spacing) * 12);
-  }
-
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
   }
@@ -1753,11 +1882,6 @@
     border-top-width: 1px;
   }
 
-  .border-l-4 {
-    border-left-style: var(--tw-border-style);
-    border-left-width: 4px;
-  }
-
   .border-none {
     --tw-border-style: none;
     border-style: none;
@@ -1765,10 +1889,6 @@
 
   .border-amber-400 {
     border-color: var(--color-amber-400);
-  }
-
-  .border-amber-500 {
-    border-color: var(--color-amber-500);
   }
 
   .border-base-300 {
@@ -1884,10 +2004,6 @@
     padding-right: calc(var(--spacing) * 4);
   }
 
-  .pl-4 {
-    padding-left: calc(var(--spacing) * 4);
-  }
-
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
   }
@@ -1915,11 +2031,6 @@
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
 
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -1938,11 +2049,6 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
   }
 
   .font-medium {
