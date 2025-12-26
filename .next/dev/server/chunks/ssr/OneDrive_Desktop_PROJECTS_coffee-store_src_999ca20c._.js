@@ -133,37 +133,37 @@ const coffeeData = [
         id: 1,
         title: "Espresso Con Panna",
         description: "A rich shot of espresso topped with a dollop of whipped cream.",
-        image: "/images/conpana.png"
+        image: "/images/EspressoconPanna.jpg"
     },
     {
         id: 2,
         title: "Caramel Macchiato",
         description: "Steamed milk with vanilla, marked with espresso and caramel.",
-        image: "/images/conpana.png"
+        image: "/images/CaramelMacchiato.jpg"
     },
     {
         id: 3,
         title: "Iced Cold Brew",
         description: "Slow-steeped, super-smooth cold brew, served over ice.",
-        image: "/images/conpana.png"
+        image: "/images/ColdBrew.jpg"
     },
     {
         id: 4,
         title: "Classic Tiramisu",
         description: "A coffee-flavoured Italian dessert. A true classic.",
-        image: "/images/conpana.png"
+        image: "/images/Tiramisu.jpg"
     },
     {
         id: 5,
         title: "Cup of Coffee",
         description: "A simple, elegant cup of our finest house blend coffee.",
-        image: "/images/conpana.png"
+        image: "/images/CupOfCoffee.jpg"
     },
     {
         id: 6,
         title: "Affogato",
         description: "A scoop of vanilla ice cream drowned in hot espresso.",
-        image: "/images/conpana.png"
+        image: "/images/Affogato.jpg"
     }
 ];
 const CardList = ()=>{

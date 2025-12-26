@@ -245,7 +245,7 @@ const Login = ()=>{
                                     children: "OR"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Login.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -254,7 +254,7 @@ const Login = ()=>{
                                     children: "Sign in with Google"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Login.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 114,
                                     columnNumber: 14
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
