@@ -1,6 +1,5 @@
 import React from 'react';
-import MiniMenu from '@/components/MiniMenu';
-import CardList from '@/components/CardList';
+
 
 export default function MainPagesLayout({
     children,
@@ -12,8 +11,7 @@ export default function MainPagesLayout({
        <main>
          {children}
          
-         <MiniMenu />
-         <CardList />
+         
          </main>
        </>
      );

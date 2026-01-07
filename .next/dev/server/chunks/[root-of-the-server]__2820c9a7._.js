@@ -111,34 +111,73 @@ __turbopack_context__.s([
     ()=>handler
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/PROJECTS/coffee-store/node_modules/next-auth/index.js [app-route] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2d$auth$2f$providers$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/PROJECTS/coffee-store/node_modules/next-auth/providers/google.js [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2d$auth$2f$providers$2f$credentials$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/PROJECTS/coffee-store/node_modules/next-auth/providers/credentials.js [app-route] (ecmascript)");
 ;
 ;
 const handler = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
     providers: [
-        (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2d$auth$2f$providers$2f$google$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
-            clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2d$auth$2f$providers$2f$credentials$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
+            name: "Credentials",
+            credentials: {
+                email: {
+                    label: "Email",
+                    type: "text"
+                },
+                password: {
+                    label: "Password",
+                    type: "password"
+                }
+            },
+            async authorize (credentials) {
+                // 1. Debugging: Log exactly what is arriving
+                console.log("--- Login Attempt Received ---");
+                console.log("Email from user:", credentials?.email);
+                const enteredEmail = credentials?.email?.toLowerCase().trim();
+                const developerEmail = "nikkitachoudhary306@gmail.com".toLowerCase().trim();
+                // 2. Load and clean Environment emails
+                const envEmails = process.env.ADMIN_EMAILS || "";
+                const adminEmails = envEmails.split(',').map((e)=>e.trim().toLowerCase());
+                const isDeveloper = enteredEmail === developerEmail;
+                const isInEnvList = adminEmails.includes(enteredEmail || "");
+                // 3. Validation Logic
+                if (isDeveloper || isInEnvList) {
+                    console.log("AUTH STATUS: Success (User verified)");
+                    return {
+                        id: "admin-master",
+                        name: "Nikkita",
+                        email: enteredEmail,
+                        isAdmin: true
+                    };
+                }
+                console.log("AUTH STATUS: Failed - Access Denied for", enteredEmail);
+                return null;
+            }
         })
     ],
     callbacks: {
-        async signIn ({ user }) {
-            const adminEmails = process.env.ADMIN_EMAILS?.split(',') || [];
-            if (user.email && adminEmails.includes(user.email)) {
-                return true;
+        async jwt ({ token, user }) {
+            if (user) {
+                token.isAdmin = user.isAdmin;
             }
-            return true;
+            return token;
         },
-        async session ({ session }) {
-            const adminEmails = process.env.ADMIN_EMAILS?.split(',') || [];
-            if (session.user && session.user.email) {
-                session.user.isAdmin = adminEmails.includes(session.user.email);
+        async session ({ session, token }) {
+            if (session.user) {
+                session.user.isAdmin = token.isAdmin;
             }
             return session;
         }
     },
-    // Optional: Add secret for production security
-    secret: process.env.NEXTAUTH_SECRET
+    pages: {
+        signIn: "/login",
+        error: "/login"
+    },
+    session: {
+        strategy: "jwt",
+        maxAge: 30 * 24 * 60 * 60
+    },
+    // If your .env.local isn't loading, we provide a fallback secret here for testing
+    secret: process.env.NEXTAUTH_SECRET || "fallback_secret_for_dev_only"
 });
 ;
 }),

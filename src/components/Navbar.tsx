@@ -1,53 +1,99 @@
- import React from "react";
-     
-     const Navbar = () => {
-       return (
-         
-        <nav className="bg-white shadow-md">
-           <div className="container mx-auto px-6 py-4 flex items-center flex-nowrap">
-    
-           <div className="container mx-auto px-6 py-4 flex items-center flex-nowrap">
-                 <div  className="flex items-center ">
-                    <a href="/home">
-                        <img src="/images/logo.png" alt="Logo" width="100" height="100"/>
-                    </a>
-                </div>
+"use client";
+import React, { useState } from "react";
+import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
+import { User, LogOut, ChevronDown, Shield, Settings } from "lucide-react";
+
+const Navbar = () => {
+    // status can be "loading", "authenticated", or "unauthenticated"
+    const { data: session, status } = useSession();
+    const [isOpen, setIsOpen] = useState(false);
+
+    // 1. Prevent UI flickering during session check
+    if (status === "loading") {
+        return <nav className="h-16 bg-[#121212] border-b border-white/5" />;
+    }
+
+    return (
+        <nav className="bg-[#121212] border-b border-white/10 h-16 flex items-center justify-between px-8 sticky top-0 z-50">
+            <Link href="/" className="flex items-center gap-2 group">
+                <Shield className="text-amber-500 group-hover:scale-110 transition-transform" />
+                <span className="text-white font-bold tracking-tight uppercase">Admin<span className="text-amber-500">Portal</span></span>
+            </Link>
+
+            <div className="flex items-center">
+                {status === "authenticated" ? (
+                    /* --- DISPLAYED CONTINUOUSLY WHILE LOGGED IN --- */
+                    <div className="relative">
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="flex items-center gap-3 bg-white/5 hover:bg-white/10 p-1.5 pr-4 rounded-full transition-all border border-white/10"
+                        >
+                            {/* User Avatar Initial */}
+                            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-white font-bold shadow-lg shadow-amber-600/20">
+                                {session.user?.email?.charAt(0).toUpperCase()}
+                            </div>
+
+                            <div className="text-left hidden md:block">
+                                <p className="text-[10px] text-gray-500 font-bold leading-none uppercase">Identity</p>
+                                <p className="text-xs text-white truncate max-w-[150px]">{session.user?.email}</p>
+                            </div>
+
+                            <ChevronDown size={14} className={`text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                        </button>
+
+                        {/* Dropdown Menu - Persists until Sign Out */}
+                        {isOpen && (
+                            <>
+                                {/* Invisible backdrop to close dropdown when clicking outside */}
+                                <div className="fixed inset-0 z-10" onClick={() => setIsOpen(false)} />
+
+                                <div className="absolute right-0 mt-3 w-56 bg-[#1c1c1c] border border-white/10 rounded-2xl shadow-2xl py-3 z-20 animate-in fade-in zoom-in-95 duration-200">
+                                    <div className="px-4 pb-3 border-b border-white/5 mb-2">
+                                        <p className="text-xs text-amber-500 font-medium italic">Active Session</p>
+                                    </div>
+
+                                    <Link
+                                        href="/admin/profile"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-white/5 transition-colors"
+                                    >
+                                        <User size={16} className="text-gray-500" /> Account Profile
+                                    </Link>
+
+                                    <Link
+                                        href="/admin/settings"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:bg-white/5 transition-colors"
+                                    >
+                                        <Settings size={16} className="text-gray-500" /> System Settings
+                                    </Link>
+
+                                    <div className="mt-2 pt-2 border-t border-white/5">
+                                        <button
+                                            onClick={() => signOut({ callbackUrl: '/' })}
+                                            className="w-full flex items-center gap-3 px-4 py-2 text-sm text-rose-400 hover:bg-rose-500/10 transition-colors group"
+                                        >
+                                            <LogOut size={16} className="group-hover:translate-x-1 transition-transform" />
+                                            Sign Out Session
+                                        </button>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                    </div>
+                ) : (
+                    /* --- DISPLAYED ONLY WHEN LOGGED OUT --- */
+                    <Link
+                        href="/login"
+                        className="bg-amber-600 hover:bg-amber-500 text-white px-6 py-2 rounded-xl text-sm font-bold transition-all shadow-lg shadow-amber-600/30"
+                    >
+                        Authenticate
+                    </Link>
+                )}
             </div>
-   
-            <div className=" hidden md:flex items-center space-x-8 max-auto">
-                <a href="/" className="text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium">Home</a>
-                <a href="/coffee" className="text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium">Coffee</a>
-                <a href="/bakery" className="text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium">Bakery</a>
-                <a href="/shop" className="text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium">Shop</a>
-                <a href="/about" className="text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium">About</a>
-                <a href="/login" className="px-4 py-2 bg-amber-600 text-white rounded-md hover:text-amber-700 transition-colors duration-300 font-medium">Login</a>
-                <a href="/admin" className="px-4 py-2 bg-amber-600 text-white rounded-md hover:text-amber-700 transition-colors duration-300 font-medium">Admin</a>
-            </div>
-   
-             <div className="flex items-center relative ml-auto">
-                <input 
-                type="text"
-                placeholder="Search.."
-                className="pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500"
-                />
-                <svg
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    ></path>
-                </svg>
-                </div>
-          </div>
         </nav>
-      );
-    };
-   
-    export default Navbar;
+    );
+};
+
+export default Navbar;

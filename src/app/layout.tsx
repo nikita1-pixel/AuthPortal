@@ -3,8 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-import AuthProvider from "@/components/AuthProvider";
+import { Providers } from "@/components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "coffee-store",
-  description: "A coffee store built with Next.js",
+  title: "AdminPanel | User Management System",
+  description: "Secure enterprise-level user management and audit logging.",
 };
 
 export default function RootLayout({
@@ -28,14 +27,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <AuthProvider>
-        <Navbar />
-        {children}
-        <Footer />
-      </AuthProvider>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#121212] text-white`}>
+        {/* Providers should wrap everything to give Navbar and Children access to useSession */}
+        <Providers>
+          {/* We render the Navbar here. 
+               Inside the Navbar component, we will check the path 
+               to decide if we show the 'Public' version or the 'Admin' version.
+            */}
+          <Navbar />
+
+          <div className="min-h-screen">
+            {children}
+          </div>
+
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/auth/[...nextauth]/route.js")
 R.c("server/chunks/881fc_next_f124f927._.js")
-R.c("server/chunks/881fc_next-auth_035da1b8._.js")
+R.c("server/chunks/881fc_next-auth_84d77f45._.js")
 R.c("server/chunks/881fc_openid-client_234c756f._.js")
 R.c("server/chunks/881fc_jose_dist_node_cjs_1a63207f._.js")
 R.c("server/chunks/881fc_1c292e3b._.js")

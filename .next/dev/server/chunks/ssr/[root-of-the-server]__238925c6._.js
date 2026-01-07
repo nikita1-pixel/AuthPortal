@@ -73,24 +73,7 @@ const Navbar = ()=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "container mx-auto px-6 py-4 flex items-center flex-nowrap",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center ",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/home",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: "/images/logo.png",
-                                alt: "Logo",
-                                width: "100",
-                                height: "100"
-                            }, void 0, false, {
-                                fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                                lineNumber: 12,
-                                columnNumber: 25
-                            }, ("TURBOPACK compile-time value", void 0))
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 11,
-                            columnNumber: 21
-                        }, ("TURBOPACK compile-time value", void 0))
+                        className: "flex items-center "
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
                         lineNumber: 10,
@@ -105,57 +88,12 @@ const Navbar = ()=>{
                     className: " hidden md:flex items-center space-x-8 max-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/",
-                            className: "text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium",
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 18,
-                            columnNumber: 17
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/coffee",
-                            className: "text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium",
-                            children: "Coffee"
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 19,
-                            columnNumber: 17
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/bakery",
-                            className: "text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium",
-                            children: "Bakery"
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 20,
-                            columnNumber: 17
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/shop",
-                            className: "text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium",
-                            children: "Shop"
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 21,
-                            columnNumber: 17
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/about",
-                            className: "text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium",
-                            children: "About"
-                        }, void 0, false, {
-                            fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 22,
-                            columnNumber: 17
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "/login",
                             className: "px-4 py-2 bg-amber-600 text-white rounded-md hover:text-amber-700 transition-colors duration-300 font-medium",
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 23,
+                            lineNumber: 17,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -164,13 +102,13 @@ const Navbar = ()=>{
                             children: "Admin"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 24,
+                            lineNumber: 18,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                    lineNumber: 17,
+                    lineNumber: 15,
                     columnNumber: 13
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -182,7 +120,7 @@ const Navbar = ()=>{
                             className: "pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 28,
+                            lineNumber: 22,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -198,18 +136,18 @@ const Navbar = ()=>{
                                 d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                                lineNumber: 40,
+                                lineNumber: 34,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                            lineNumber: 33,
+                            lineNumber: 27,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/components/Navbar.tsx",
-                    lineNumber: 27,
+                    lineNumber: 21,
                     columnNumber: 14
                 }, ("TURBOPACK compile-time value", void 0))
             ]
@@ -3358,26 +3296,7 @@ function getImageProps(imgProps) {
                 ("TURBOPACK compile-time value", 384)
             ]),
             "qualities": ("TURBOPACK compile-time value", [
-                ("TURBOPACK compile-time value", 75),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70),
-                ("TURBOPACK compile-time value", 70)
+                ("TURBOPACK compile-time value", 75)
             ]),
             "path": ("TURBOPACK compile-time value", "/_next/image"),
             "loader": ("TURBOPACK compile-time value", "default"),
