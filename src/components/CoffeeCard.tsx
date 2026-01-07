@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Coffee } from "@app/coffee/page";
+import { Coffee } from "@/app/coffee/page";
 import React from "react";
 
 interface CoffeeCardProps {

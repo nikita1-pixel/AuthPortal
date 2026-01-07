@@ -120,7 +120,25 @@ const handler = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET
         })
-    ]
+    ],
+    callbacks: {
+        async signIn ({ user }) {
+            const adminEmails = process.env.ADMIN_EMAILS?.split(',') || [];
+            if (user.email && adminEmails.includes(user.email)) {
+                return true;
+            }
+            return true;
+        },
+        async session ({ session }) {
+            const adminEmails = process.env.ADMIN_EMAILS?.split(',') || [];
+            if (session.user && session.user.email) {
+                session.user.isAdmin = adminEmails.includes(session.user.email);
+            }
+            return session;
+        }
+    },
+    // Optional: Add secret for production security
+    secret: process.env.NEXTAUTH_SECRET
 });
 ;
 }),

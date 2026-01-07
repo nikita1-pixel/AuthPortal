@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/nirma/OneDrive/Desktop/PROJECTS/coffee-store/src/app/admin/page.tsx"],"sourcesContent":["// import Login from \"@/components/Admin\";\r\n// import React from \"react\";\r\n\r\n// const AdminPage = () => {\r\n//     return (\r\n//         <main className=\"flex min-h-screen flex-col items-center justify-center bg-[url('/images/espresso-bg.png')] bg-cover p-8\">\r\n//             <Login />\r\n//         </main>\r\n//     );\r\n// };\r\n\r\n// export default AdminPage;"],"names":[],"mappings":"AAAA,0CAA0C;AAC1C,6BAA6B;AAE7B,4BAA4B;AAC5B,eAAe;AACf,qIAAqI;AACrI,wBAAwB;AACxB,kBAAkB;AAClB,SAAS;AACT,KAAK;AAEL,4BAA4B"}}]
+}

@@ -21,6 +21,7 @@
                 <a href="/shop" className="text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium">Shop</a>
                 <a href="/about" className="text-gray-600 hover:text-amber-700 transition-colors duration-300 font-medium">About</a>
                 <a href="/login" className="px-4 py-2 bg-amber-600 text-white rounded-md hover:text-amber-700 transition-colors duration-300 font-medium">Login</a>
+                <a href="/admin" className="px-4 py-2 bg-amber-600 text-white rounded-md hover:text-amber-700 transition-colors duration-300 font-medium">Admin</a>
             </div>
    
              <div className="flex items-center relative ml-auto">
