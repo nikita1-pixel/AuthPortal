@@ -1,16 +1,40 @@
-# React + Vite
+AdminPanel | Enterprise User Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A robust, full-stack administrative solution built with Next.js 15+ and NextAuth.js. This system provides a secure interface for managing organizational identities, featuring strict Role-Based Access Control (RBAC) and a modern dark-terminal aesthetic.
 
-Currently, two official plugins are available:
+🌟 Project Overview
+This project serves as a centralized hub for managing user access and system permissions. It is designed to be integrated into any existing infrastructure that requires a secure, private administrative layer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Key Features:
+Dual-Role Authentication: Specialized logic for Super Admin (Full CRUD) and Viewer (Read-Only) permissions.
 
-## React Compiler
+Secure Session Management: Implementation of JWT (JSON Web Token) strategy for persistent, encrypted sessions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Dynamic UI Architecture: A smart Navbar that switches UI elements based on real-time authentication states.
 
-## Expanding the ESLint configuration
+Enterprise Security: Middleware-level protection that intercepts unauthorized requests and redirects to a custom 403 Access Denied portal.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive Dark Interface: A high-contrast, professional UI designed for long-duration administrative tasks.
+
+Deployment (Render.com)
+This project is optimized for deployment on Render.
+
+⚙️ Recommended Configuration:
+Build Command: npm install; npm run build
+
+Start Command: npm run start
+
+Required Env Variables:
+
+NEXTAUTH_SECRET: (Random 32-character string)
+
+NEXTAUTH_URL: Your production domain
+
+ADMIN_EMAILS: Comma-separated list of authorized administrator emails.
+
+Access Control Hierarchy
+Unauthorized: Redirected to /login.
+
+Viewer Role: Can navigate the system and view user lists, but "Add User" and "Delete" actions are hidden and server-protected.
+
+Super Admin: Full system authority, including the ability to modify the user registry and system settings.
