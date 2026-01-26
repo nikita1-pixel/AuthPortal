@@ -1,0 +1,20 @@
+{
+  "node": {
+    "407bd203ca4d20b717b58988a1ff265103c12ab77c": {
+      "workers": {
+        "app/register/page": {
+          "moduleId": "[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/.next-internal/server/app/register/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/src/app/actions/register.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "registerUser",
+          "filename": "OneDrive/Desktop/CODE/authport/Auth-Portal/src/app/actions/register.ts"
+        }
+      },
+      "layer": {
+        "app/register/page": "action-browser"
+      },
+      "exportedName": "registerUser",
+      "filename": "OneDrive/Desktop/CODE/authport/Auth-Portal/src/app/actions/register.ts"
+    }
+  },
+  "edge": {}
+}

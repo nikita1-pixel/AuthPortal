@@ -4,24 +4,18 @@ import { NextResponse } from "next/server";
 export default withAuth(
     function middleware(req) {
         const token = req.nextauth.token;
-        const isTargetingAdmin = req.nextUrl.pathname.startsWith("/admin");
+        const isAdminPage = req.nextUrl.pathname.startsWith("/admin");
 
-        // If the user is logged in but NOT an admin, kick them to home
-        // This relies on 'isAdmin' being present in the JWT token
-        if (isTargetingAdmin && token?.isAdmin !== true) {
+        // FIX: Match the property name we used in the JWT callback
+        if (isAdminPage && !token?.isAdmin) {
             return NextResponse.redirect(new URL("/", req.url));
         }
-
-        return NextResponse.next();
     },
     {
         callbacks: {
-            // authorized: returns true if the user is authenticated
             authorized: ({ token }) => !!token,
         },
     }
 );
 
-export const config = {
-    matcher: ["/admin/:path*"]
-};
+export const config = { matcher: ["/admin/:path*", "/profile"] };

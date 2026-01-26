@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 
 export default function UnauthorizedPage() {
     const router = useRouter();
-
     return (
         <div className="min-h-screen bg-[#121212] flex items-center justify-center p-6">
             <div className="max-w-md w-full text-center space-y-8 animate-in fade-in zoom-in duration-500">
@@ -24,7 +23,9 @@ export default function UnauthorizedPage() {
 
                 {/* Text Content */}
                 <div className="space-y-3">
-                    <h1 className="text-4xl font-bold text-white font-serif tracking-tight">Access Denied</h1>
+                    <h1 className="text-4xl font-bold text-white font-serif tracking-tight">
+                        Access Denied
+                    </h1>
                     <p className="text-gray-400 leading-relaxed">
                         Your current account credentials do not have the required permissions to access the internal administrative terminal.
                     </p>
@@ -50,7 +51,10 @@ export default function UnauthorizedPage() {
 
                 {/* Support Link */}
                 <p className="text-sm text-gray-600">
-                    Think this is a mistake? <span className="text-amber-500 hover:underline cursor-pointer">Contact System Admin</span>
+                    Think this is a mistake? 
+                    <span className="text-amber-500 hover:underline cursor-pointer">
+                        Contact System Admin
+                    </span>
                 </p>
             </div>
         </div>

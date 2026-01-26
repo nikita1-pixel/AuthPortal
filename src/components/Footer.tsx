@@ -2,10 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Shield, Terminal, Globe, Cpu } from 'lucide-react'; // Using icons for a tech feel
+import ParticlesBG from './PraticalesBG';
 
 const Footer = () => {
   return (
     <footer className="bg-[#121212] text-gray-400 py-12 border-t border-white/5 mt-auto">
+      <ParticlesBG />
       <div className="container mx-auto px-6">
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">

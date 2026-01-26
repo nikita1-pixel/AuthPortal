@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/nirma/OneDrive/Desktop/CODE/authport/Auth-Portal/src/components/Minipage.tsx"],"sourcesContent":["import React from \"react\";\r\nimport ParticlesBG from \"./PraticalesBG\";\r\n\r\nexport default function Minipage (){\r\n    return(\r\n        <div>Minipage Component\r\n            <ParticlesBG />\r\n        </div>\r\n    )\r\n}"],"names":[],"mappings":";;;;;AACA;;;AAEe,SAAS;IACpB,qBACI,2SAAC;;YAAI;0BACD,2SAAC,0MAAW;;;;;;;;;;;AAGxB"}},
+    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/nirma/OneDrive/Desktop/CODE/authport/Auth-Portal/src/app/page.tsx"],"sourcesContent":["import Minipage from \"@/components/Minipage\";\r\n\r\nexport default function HomePage() {\r\n    return (\r\n        <main className=\"flex flex-col items-center justify-center py-20 px-4\">\r\n            \r\n                        {/* This is your primary content */}\r\n            <Minipage />\r\n\r\n            {/* You can add a simple \"Get Started\" link here later if Minipage doesn't have one */}\r\n        </main>\r\n    );\r\n}"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACpB,qBACI,2SAAC;QAAK,WAAU;kBAGZ,cAAA,2SAAC,sMAAQ;;;;;;;;;;AAKrB"}}]
+}

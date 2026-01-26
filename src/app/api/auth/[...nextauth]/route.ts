@@ -10,23 +10,17 @@ const handler = NextAuth({
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        // 1. Debugging: Log exactly what is arriving
-        console.log("--- Login Attempt Received ---");
-        console.log("Email from user:", credentials?.email);
-
         const enteredEmail = credentials?.email?.toLowerCase().trim();
-        const developerEmail = "nikkitachoudhary306@gmail.com".toLowerCase().trim();
+        const enteredPassword = credentials?.password;
 
-        // 2. Load and clean Environment emails
-        const envEmails = process.env.ADMIN_EMAILS || "";
-        const adminEmails = envEmails.split(',').map(e => e.trim().toLowerCase());
+        // 1. Define your master password (or pull from process.env.ADMIN_PASSWORD)
+        const MASTER_PASSWORD = "1234567";
 
-        const isDeveloper = enteredEmail === developerEmail;
-        const isInEnvList = adminEmails.includes(enteredEmail || "");
+        const isDeveloper = enteredEmail === "nikkitachoudhary306@gmail.com";
+        const isCorrectPassword = enteredPassword === MASTER_PASSWORD;
 
-        // 3. Validation Logic
-        if (isDeveloper || isInEnvList) {
-          console.log("AUTH STATUS: Success (User verified)");
+        // 2. Both email AND password must be correct
+        if (isDeveloper && isCorrectPassword) {
           return {
             id: "admin-master",
             name: "Nikkita",
@@ -35,8 +29,7 @@ const handler = NextAuth({
           };
         }
 
-        console.log("AUTH STATUS: Failed - Access Denied for", enteredEmail);
-        return null;
+        return null; // Access Denied
       }
     })
   ],

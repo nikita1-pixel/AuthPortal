@@ -53,10 +53,9 @@ const AdminLogin = () => {
             <div className="sm:mx-auto sm:w-full sm:max-w-sm text-center">
                 <h1 className="text-amber-600 font-bold tracking-widest text-sm uppercase">Admin Portal</h1>
                 <h2 className="mt-4 text-center text-3xl font-bold tracking-tight text-white font-serif">
-                    Coffee Store Management
+                    User Management System
                 </h2>
             </div>
-
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form onSubmit={handleLogin} className="space-y-6">
                     {/* Email Field */}
@@ -73,11 +72,10 @@ const AdminLogin = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 className="block w-full rounded-md border-0 bg-white/5 py-2.5 px-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm"
-                                placeholder="admin@coffeestore.com"
+                                placeholder="admin@system.com"
                             />
                         </div>
                     </div>
-
                     {/* Password Field */}
                     <div>
                         <div className="flex items-center justify-between">
@@ -97,7 +95,6 @@ const AdminLogin = () => {
                             />
                         </div>
                     </div>
-
                     {/* Submit Button */}
                     <div>
                         <button
@@ -108,7 +105,6 @@ const AdminLogin = () => {
                         </button>
                     </div>
                 </form>
-
                 <p className="mt-10 text-center text-sm text-gray-500">
                     Not an admin?{" "}
                     <a href="/" className="font-semibold leading-6 text-amber-500 hover:text-amber-400">
