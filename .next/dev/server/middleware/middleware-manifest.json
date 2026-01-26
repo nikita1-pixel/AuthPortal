@@ -1,35 +1,6 @@
 {
   "sorted_middleware": [],
-  "middleware": {
-    "/": {
-      "files": [
-        "server/edge/chunks/OneDrive_Desktop_CODE_authport_Auth-Portal_b9b44e34._.js",
-        "server/edge/chunks/[root-of-the-server]__dd4edb43._.js",
-        "server/edge/chunks/turbopack-OneDrive_Desktop_CODE_authport_Auth-Portal_edge-wrapper_e93faa3e.js"
-      ],
-      "name": "middleware",
-      "page": "/",
-      "matchers": [
-        {
-          "regexp": "/:nextData(_next/data/[^/]{1,})?/admin/:path*{(\\\\.json)}?",
-          "originalSource": "/admin/:path*"
-        },
-        {
-          "regexp": "/:nextData(_next/data/[^/]{1,})?/profile{(\\\\.json)}?",
-          "originalSource": "/profile"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "env": {
-        "__NEXT_BUILD_ID": "development",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "BIFbWx5mD+H8Fvu2Xpz/6gA73DH2G5U6O7W5Ej705BE=",
-        "__NEXT_PREVIEW_MODE_ID": "ced6cf04af0c16813d2587001aa30c24",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "54314c64288d763265d5ae53b8213256c7b63d44790d47b452b0078facd55177",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "452a2fa3e9e3a1bc099a939994d429a25f006e708ef78b973af9003513a2ad61"
-      }
-    }
-  },
+  "middleware": {},
   "instrumentation": null,
   "functions": {}
 }
