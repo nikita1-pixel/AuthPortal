@@ -94,7 +94,7 @@ __turbopack_context__.s([
     "proxy",
     ()=>proxy
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2d$auth$2f$middleware$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/node_modules/next-auth/middleware.js [middleware] (ecmascript)"); // Note: NextAuth may update this export name in future versions
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2d$auth$2f$middleware$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/node_modules/next-auth/middleware.js [middleware] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/node_modules/next/server.js [middleware] (ecmascript)");
 ;
 ;

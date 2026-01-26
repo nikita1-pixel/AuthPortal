@@ -1,12 +1,20 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { withAuth, NextRequestWithAuth } from "next-auth/middleware";
+import { NextResponse } from "next/server";
 
-// Rename from 'middleware' to 'proxy'
-export function proxy(request: NextRequest) {
-    // Your existing logic here
-    return NextResponse.next();
+// Adding the type 'NextRequestWithAuth' to req fixes the error
+export function proxy(req: NextRequestWithAuth) {
+    const token = req.nextauth.token;
+    const isAdminPage = req.nextUrl.pathname.startsWith("/admin");
+
+    if (isAdminPage && !token?.isAdmin) {
+        return NextResponse.redirect(new URL("/", req.url));
+    }
 }
 
-export const config = {
-    matcher: '/admin/:path*',
-};
+export default withAuth(proxy, {
+    callbacks: {
+        authorized: ({ token }) => !!token,
+    },
+});
+
+export const config = { matcher: ["/admin/:path*", "/profile"] };
