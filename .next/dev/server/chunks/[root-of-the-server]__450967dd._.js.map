@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 88, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/nirma/OneDrive/Desktop/CODE/authport/Auth-Portal/src/proxy.ts"],"sourcesContent":["import { withAuth } from \"next-auth/middleware\";\r\nimport { NextResponse } from \"next/server\";\r\n\r\n// 1. Rename the function from 'middleware' to 'proxy'\r\nexport function proxy(req) {\r\n    const token = req.nextauth.token;\r\n    const isAdminPage = req.nextUrl.pathname.startsWith(\"/admin\");\r\n\r\n    if (isAdminPage && !token?.isAdmin) {\r\n        return NextResponse.redirect(new URL(\"/\", req.url));\r\n    }\r\n}\r\n\r\n// 2. Wrap it with withAuth and export as default\r\nexport default withAuth(proxy, {\r\n    callbacks: {\r\n        authorized: ({ token }) => !!token,\r\n    },\r\n});\r\n\r\nexport const config = { matcher: [\"/admin/:path*\", \"/profile\"] };"],"names":[],"mappings":";;;;;;;;AAAA;AACA;;;AAGO,SAAS,MAAM,GAAG;IACrB,MAAM,QAAQ,IAAI,QAAQ,CAAC,KAAK;IAChC,MAAM,cAAc,IAAI,OAAO,CAAC,QAAQ,CAAC,UAAU,CAAC;IAEpD,IAAI,eAAe,CAAC,OAAO,SAAS;QAChC,OAAO,2MAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,KAAK,IAAI,GAAG;IACrD;AACJ;uCAGe,IAAA,mNAAQ,EAAC,OAAO;IAC3B,WAAW;QACP,YAAY,CAAC,EAAE,KAAK,EAAE,GAAK,CAAC,CAAC;IACjC;AACJ;AAEO,MAAM,SAAS;IAAE,SAAS;QAAC;QAAiB;KAAW;AAAC"}}]
+}
