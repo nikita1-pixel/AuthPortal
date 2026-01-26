@@ -18,11 +18,11 @@ export default function RegisterPage() {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-[#121212]">
+        <div className="flex flex-col items-center  justify-center min-h-screen bg-[#121212]">
             {/* Logic: Using an anonymous action to call our handler */}
             <form
                 action={handleSubmit}
-                className="bg-white/5 p-8 rounded-xl border border-white/10 flex flex-col gap-4"
+                className="bg-white/5 p-8 rounded-xl border border-white/10 flex flex-col gap-9 max-w-md w-full"
             >
                 <h2 className="text-white text-2xl font-bold">Create Account</h2>
 

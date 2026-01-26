@@ -7,17 +7,20 @@ const config: Config = {
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
+    // tailwind.config.ts
     theme: {
         extend: {
-            // Optional: You can extend the motion specific theme here
-            motionScale: {
-                "200": "200%",
+            animation: {
+                gradient: 'gradient 15s ease infinite',
             },
-            motionTimingFunction: {
-                custom: "cubic-bezier(0.4, 0, 0.2, 1)",
+            keyframes: {
+                gradient: {
+                    '0%, 100%': { 'background-position': '0% 50%' },
+                    '50%': { 'background-position': '100% 50%' },
+                },
             },
         },
-    },
+    }
 };
 
 export default config;

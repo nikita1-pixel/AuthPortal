@@ -71,21 +71,21 @@ const Navbar = ()=>{
         }, ("TURBOPACK compile-time value", void 0));
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-        className: "bg-[#121212] border-b border-white/10 h-16 flex items-center justify-between px-8 sticky top-0 z-50",
+        className: "bg-[#121212] border-b border-white/10 h-25 flex items-center justify-between px-8 sticky top-0 z-50",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 href: "/",
                 className: "flex items-center gap-2 group",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__["Shield"], {
-                        className: "text-amber-500 group-hover:scale-110 transition-transform"
+                        className: "text-amber-500 group-hover:scale-130 transition-transform"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/src/components/Navbar.tsx",
                         lineNumber: 30,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-white font-bold tracking-tight uppercase",
+                        className: "text-white font-bold text-xl transition-transform uppercase",
                         children: [
                             "Admin",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -94,7 +94,7 @@ const Navbar = ()=>{
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/src/components/Navbar.tsx",
                                 lineNumber: 31,
-                                columnNumber: 82
+                                columnNumber: 96
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {

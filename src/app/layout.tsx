@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Providers } from "@/components/Providers";
+import Minipage from "@/components/Minipage";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AdminPanel | User Management System",
+  title: "User Management System",
   description: "Secure enterprise-level user management and audit logging.",
 };
 
@@ -35,11 +37,12 @@ export default function RootLayout({
                to decide if we show the 'Public' version or the 'Admin' version.
             */}
           <Navbar />
-
+            
           <div className="min-h-screen">
+           
             {children}
           </div>
-
+         
           <Footer />
         </Providers>
       </body>

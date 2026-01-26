@@ -17,7 +17,7 @@ const [isOpen, setIsOpen] = useState(false);
 
         // Logic: signOut() tells the Next-Auth backend to destroy the session.
         // callbackUrl: "/" tells it where to send the user after they are logged out.
-        await signOut({ callbackUrl: "/home" });
+        await signOut({ callbackUrl: "/" });
     };
 // 1. Prevent UI flickering during session check
 if (status === "loading") {
@@ -25,10 +25,10 @@ if (status === "loading") {
 }
 
 return (
-    <nav className="bg-[#121212] border-b border-white/10 h-16 flex items-center justify-between px-8 sticky top-0 z-50">
+    <nav className="bg-[#121212] border-b border-white/10 h-25 flex items-center shadow-[0_4px_30px_rgba(0,0,0,0.1)] justify-between px-8 sticky top-0 z-50">
         <Link href="/" className="flex items-center gap-2 group">
-            <Shield className="text-amber-500 group-hover:scale-110 transition-transform" />
-            <span className="text-white font-bold tracking-tight uppercase">Admin<span className="text-amber-500">Portal</span></span>
+            <Shield className="text-amber-500 group-hover:scale-130 transition-transform" />
+            <span className="text-white font-bold text-xl transition-transform uppercase">Admin<span className="text-amber-500">Portal</span></span>
         </Link>
 
         <div className="flex items-center">
@@ -101,6 +101,11 @@ return (
                     Authenticate
                 </Link>
             )}
+            <>
+            <Link href="/register" className="ml-4 bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-xl text-sm font-bold transition-all shadow-lg shadow-gray-700/30">
+                Register
+            </Link>
+            </>
         </div>
     </nav>
 );

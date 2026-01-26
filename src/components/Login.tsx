@@ -170,6 +170,14 @@ const Login: React.FC = () => {
               {isSubmitting ? 'Authenticating...' : 'Secure Login'}
             </button>
 
+            {/* register button */}
+            <Link href="/register" className="flex w-full justify-center rounded-md bg-amber-600 px-3 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 transition-all">
+            <button type="button">
+              Create Account
+            </button>
+
+
+            </Link>
             <div className="relative">
               <div className="absolute inset-0 flex items-center"><span className="w-full border-t border-white/10"></span></div>
               <div className="relative flex justify-center text-xs uppercase"><span className="bg-[#121212] px-2 text-gray-500 font-sans">Federated Auth</span></div>
