@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/src/middleware.ts"],"sourcesContent":["import { withAuth } from \"next-auth/middleware\";\r\nimport { NextResponse } from \"next/server\";\r\n\r\nexport default withAuth(\r\n    function middleware(req) {\r\n        const token = req.nextauth.token;\r\n        const isAdminPage = req.nextUrl.pathname.startsWith(\"/admin\");\r\n\r\n        // FIX: Match the property name we used in the JWT callback\r\n        if (isAdminPage && !token?.isAdmin) {\r\n            return NextResponse.redirect(new URL(\"/\", req.url));\r\n        }\r\n    },\r\n    {\r\n        callbacks: {\r\n            authorized: ({ token }) => !!token,\r\n        },\r\n    }\r\n);\r\n\r\nexport const config = { matcher: [\"/admin/:path*\", \"/profile\"] };"],"names":[],"mappings":";;;;;;AAAA;AACA;AAAA;;;uCAEe,IAAA,2NAAQ,EACnB,SAAS,WAAW,GAAG;IACnB,MAAM,QAAQ,IAAI,QAAQ,CAAC,KAAK;IAChC,MAAM,cAAc,IAAI,OAAO,CAAC,QAAQ,CAAC,UAAU,CAAC;IAEpD,2DAA2D;IAC3D,IAAI,eAAe,CAAC,OAAO,SAAS;QAChC,OAAO,6PAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,KAAK,IAAI,GAAG;IACrD;AACJ,GACA;IACI,WAAW;QACP,YAAY,CAAC,EAAE,KAAK,EAAE,GAAK,CAAC,CAAC;IACjC;AACJ;AAGG,MAAM,SAAS;IAAE,SAAS;QAAC;QAAiB;KAAW;AAAC"}}]
+}

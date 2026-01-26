@@ -11,7 +11,7 @@ const LoginPage = () => {
         <main className="relative flex min-h-screen flex-col items-center justify-center bg-[#121212] overflow-hidden">
 
             {/* Background Decoration: Subtle glow effect */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-600/5 via-transparent to-transparent opacity-50 pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-amber-600/5 via-transparent to-transparent opacity-50 pointer-events-none" />
 
             {/* The Login component handles the form and the signIn() function */}
             <div className="z-10 w-full flex justify-center items-center">

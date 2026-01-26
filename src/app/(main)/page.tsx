@@ -37,7 +37,7 @@ const ManagementHomePage = () => {
       </div>
 
       {/* Feature Grid Preview */}
-      <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl z-10 text-left">
+      <div className=" mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl z-10 text-left">
         <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
           <div className="text-amber-500 text-2xl mb-2 font-bold">01.</div>
           <h3 className="text-white font-bold text-lg mb-2">Role Management</h3>

@@ -60,7 +60,7 @@ function HomePage() {
                                 lineNumber: 22,
                                 columnNumber: 21
                             }, this),
-                            " System Status: Online"
+                            "System Status: Online"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
@@ -76,13 +76,13 @@ function HomePage() {
                                 children: "Control"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 26,
+                                lineNumber: 27,
                                 columnNumber: 30
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                        lineNumber: 25,
+                        lineNumber: 26,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -90,7 +90,7 @@ function HomePage() {
                         children: "The professional gateway for user administration. Securely manage identities, monitor system health, and audit access logs through a single interface."
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -106,13 +106,13 @@ function HomePage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                        lineNumber: 41,
+                                        lineNumber: 42,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 36,
+                                lineNumber: 37,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -121,13 +121,13 @@ function HomePage() {
                                 children: "System Documentation"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 44,
+                                lineNumber: 45,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                        lineNumber: 35,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, this)
                 ]
@@ -147,7 +147,7 @@ function HomePage() {
                                 size: 28
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 56,
+                                lineNumber: 57,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -155,7 +155,7 @@ function HomePage() {
                                 children: "Encrypted Auth"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 57,
+                                lineNumber: 58,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -163,13 +163,13 @@ function HomePage() {
                                 children: "NextAuth.js integration with JWT session encryption for total security."
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                        lineNumber: 55,
+                        lineNumber: 56,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -180,7 +180,7 @@ function HomePage() {
                                 size: 28
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -188,7 +188,7 @@ function HomePage() {
                                 children: "Real-time Logs"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 63,
+                                lineNumber: 64,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -196,13 +196,13 @@ function HomePage() {
                                 children: "Monitor system interactions as they happen with low-latency audit trails."
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 64,
+                                lineNumber: 65,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -213,7 +213,7 @@ function HomePage() {
                                 size: 28
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 68,
+                                lineNumber: 69,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -221,7 +221,7 @@ function HomePage() {
                                 children: "Role Management"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 69,
+                                lineNumber: 70,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -229,19 +229,19 @@ function HomePage() {
                                 children: "Granular permission control to restrict access to sensitive system nodes."
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                                lineNumber: 70,
+                                lineNumber: 71,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                        lineNumber: 67,
+                        lineNumber: 68,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive/Desktop/PROJECTS/coffee-store/src/app/home/page.tsx",
-                lineNumber: 54,
+                lineNumber: 55,
                 columnNumber: 13
             }, this)
         ]

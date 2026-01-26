@@ -29,7 +29,6 @@ const __TURBOPACK__default__export__ = (0, __TURBOPACK__imported__module__$5b$pr
     const token = req.nextauth.token;
     const isTargetingAdmin = req.nextUrl.pathname.startsWith("/admin");
     // If the user is logged in but NOT an admin, kick them to home
-    // This relies on 'isAdmin' being present in the JWT token
     if (isTargetingAdmin && token?.isAdmin !== true) {
         return __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$PROJECTS$2f$coffee$2d$store$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].redirect(new URL("/", req.url));
     }

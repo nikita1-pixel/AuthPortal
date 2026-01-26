@@ -19,7 +19,8 @@ export default function HomePage() {
             {/* 2. Hero Section */}
             <div className="relative z-10 max-w-4xl text-center">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-amber-500 text-xs font-mono mb-6 uppercase tracking-widest">
-                    <Lock size={12} /> System Status: Online
+                    <Lock size={12} /> 
+                    System Status: Online
                 </div>
 
                 <h1 className="text-5xl md:text-8xl font-bold text-white font-serif tracking-tight leading-[1.1]">
