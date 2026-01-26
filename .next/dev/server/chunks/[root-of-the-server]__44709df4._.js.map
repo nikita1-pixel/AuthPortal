@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/nirma/OneDrive/Desktop/CODE/authport/Auth-Portal/src/proxy.ts"],"sourcesContent":["import { NextResponse } from 'next/server';\r\nimport type { NextRequest } from 'next/server';\r\n\r\n// Rename from 'middleware' to 'proxy'\r\nexport function proxy(request: NextRequest) {\r\n    // Your existing logic here\r\n    return NextResponse.next();\r\n}\r\n\r\nexport const config = {\r\n    matcher: '/admin/:path*',\r\n};"],"names":[],"mappings":";;;;;;AAAA;;AAIO,SAAS,MAAM,OAAoB;IACtC,2BAA2B;IAC3B,OAAO,2MAAY,CAAC,IAAI;AAC5B;AAEO,MAAM,SAAS;IAClB,SAAS;AACb"}}]
+}
