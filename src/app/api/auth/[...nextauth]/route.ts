@@ -1,5 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { compare } from "bcryptjs"; 
+import { prisma } from "@/lib/prisma"; 
 
 const handler = NextAuth({
   providers: [
@@ -10,26 +12,37 @@ const handler = NextAuth({
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        const enteredEmail = credentials?.email?.toLowerCase().trim();
-        const enteredPassword = credentials?.password;
-
-        // 1. Define your master password (or pull from process.env.ADMIN_PASSWORD)
-        const MASTER_PASSWORD = "1234567";
-
-        const isDeveloper = enteredEmail === "nikkitachoudhary306@gmail.com";
-        const isCorrectPassword = enteredPassword === MASTER_PASSWORD;
-
-        // 2. Both email AND password must be correct
-        if (isDeveloper && isCorrectPassword) {
-          return {
-            id: "admin-master",
-            name: "Nikkita",
-            email: enteredEmail,
-            isAdmin: true
-          };
+        if (!credentials?.email || !credentials?.password) {
+          throw new Error("Please enter an email and password");
         }
 
-        return null; // Access Denied
+        const enteredEmail = credentials.email.toLowerCase().trim();
+        const enteredPassword = credentials.password;
+
+       //lookoutforemail
+        const user = await prisma.user.findUnique({
+          where: { email: enteredEmail }
+        });
+
+        //validating with password
+        if (!user || !user.password) {
+          throw new Error("No user found with this email");
+        }
+
+        // 3. COMPARE: Use bcrypt to check if the entered password matches the hashed one
+        const isCorrectPassword = await compare(enteredPassword, user.password);
+
+        if (!isCorrectPassword) {
+          throw new Error("Incorrect password");
+        }
+
+        //This data goes into the JWT token
+        return {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          isAdmin: user.email === "nikkitachoudhary306@gmail.com", 
+        };
       }
     })
   ],
@@ -37,26 +50,27 @@ const handler = NextAuth({
     async jwt({ token, user }) {
       if (user) {
         token.isAdmin = (user as any).isAdmin;
+        token.id = user.id; // Store ID for database queries later
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
         (session.user as any).isAdmin = token.isAdmin;
+        (session.user as any).id = token.id;
       }
       return session;
     }
   },
   pages: {
     signIn: "/login",
-    error: "/login", // Redirect back to login on error
+    error: "/login",
   },
   session: {
     strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
+    maxAge: 30 * 24 * 60 * 60,
   },
-  // If your .env.local isn't loading, we provide a fallback secret here for testing
-  secret: process.env.NEXTAUTH_SECRET || "fallback_secret_for_dev_only",
+  secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { handler as GET, handler as POST };
