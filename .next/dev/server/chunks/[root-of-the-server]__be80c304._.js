@@ -117,7 +117,11 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/@prisma/client [external] (@prisma/client, cjs)");
 ;
 const globalForPrisma = /*TURBOPACK member replacement*/ __turbopack_context__.g;
-const prisma = globalForPrisma.prisma || new __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__["PrismaClient"]();
+const prisma = globalForPrisma.prisma || new __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__["PrismaClient"]({
+    log: [
+        "query"
+    ]
+});
 if ("TURBOPACK compile-time truthy", 1) globalForPrisma.prisma = prisma;
 }),
 "[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/src/app/api/auth/[...nextauth]/route.ts [app-route] (ecmascript)", ((__turbopack_context__) => {
@@ -127,20 +131,17 @@ __turbopack_context__.s([
     "GET",
     ()=>handler,
     "POST",
-    ()=>handler,
-    "authOptions",
-    ()=>authOptions
+    ()=>handler
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/node_modules/next-auth/index.js [app-route] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f40$auth$2f$prisma$2d$adapter$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/node_modules/@auth/prisma-adapter/index.js [app-route] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/src/lib/prisma.ts [app-route] (ecmascript)"); // Use the singleton we set up
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2d$auth$2f$providers$2f$credentials$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/node_modules/next-auth/providers/credentials.js [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/node_modules/bcryptjs/index.js [app-route] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/CODE/authport/Auth-Portal/src/lib/prisma.ts [app-route] (ecmascript)");
 ;
 ;
 ;
 ;
-const authOptions = {
-    adapter: (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f40$auth$2f$prisma$2d$adapter$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["PrismaAdapter"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"]),
+const handler = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2d$auth$2f$providers$2f$credentials$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
             name: "Credentials",
@@ -155,54 +156,62 @@ const authOptions = {
                 }
             },
             async authorize (credentials) {
-                try {
-                    const user = await __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].user.findUnique({
-                        where: {
-                            email: credentials?.email
-                        }
-                    });
-                    if (user && user.password === credentials?.password) {
-                        // Logic: NextAuth expects an object, not a Prisma object with hidden metadata
-                        return {
-                            id: user.id,
-                            email: user.email,
-                            name: user.name,
-                            role: user.role
-                        };
-                    }
-                    console.log("Login failed: Invalid email or password");
-                    return null;
-                } catch (error) {
-                    console.error("Database error during auth:", error);
-                    throw new Error("Internal Server Error");
+                if (!credentials?.email || !credentials?.password) {
+                    throw new Error("Please enter an email and password");
                 }
+                const enteredEmail = credentials.email.toLowerCase().trim();
+                const enteredPassword = credentials.password;
+                //lookoutforemail
+                const user = await __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].user.findUnique({
+                    where: {
+                        email: enteredEmail
+                    }
+                });
+                //validating with password
+                if (!user || !user.password) {
+                    throw new Error("No user found with this email");
+                }
+                // 3. COMPARE: Use bcrypt to check if the entered password matches the hashed one
+                const isCorrectPassword = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["compare"])(enteredPassword, user.password);
+                if (!isCorrectPassword) {
+                    throw new Error("Incorrect password");
+                }
+                //This data goes into the JWT token
+                return {
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    isAdmin: user.email === "nikkitachoudhary306@gmail.com"
+                };
             }
         })
     ],
     callbacks: {
-        // Logic: With Credentials, NextAuth uses JWT. 
-        // We must pass the data from the Token to the Session.
         async jwt ({ token, user }) {
             if (user) {
-                token.role = user.role;
-                token.id = user.id;
+                token.isAdmin = user.isAdmin;
+                token.id = user.id; // Store ID for database queries later
             }
             return token;
         },
         async session ({ session, token }) {
             if (session.user) {
-                session.user.role = token.role;
+                session.user.isAdmin = token.isAdmin;
                 session.user.id = token.id;
             }
             return session;
         }
     },
+    pages: {
+        signIn: "/login",
+        error: "/login"
+    },
     session: {
-        strategy: "jwt"
+        strategy: "jwt",
+        maxAge: 30 * 24 * 60 * 60
     },
     secret: process.env.NEXTAUTH_SECRET
-};
-const handler = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$CODE$2f$authport$2f$Auth$2d$Portal$2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])(authOptions);
+});
 ;
 }),
 ];

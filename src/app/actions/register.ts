@@ -1,27 +1,27 @@
+// actions/register.ts
 "use server";
-import "server-only";
-import{ prisma } from"@/lib/prisma";
-import bcrypt from "bcryptjs";
+import { hash } from "bcryptjs";
+import { prisma } from "@/lib/prisma";
 
-export async function registerUser(formData : FormData){
+export async function registerUser(formData: FormData) {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
-    const name = formData.get("name") as string;
 
-    const hashedPassword = await bcrypt.hash(password || "", 10);
+    // 1. Validation: Check if user exists
+    const existingUser = await prisma.user.findUnique({ where: { email } });
+    if (existingUser) return { error: "Email already taken" };
 
-    try{
-        await prisma.user.create({
-            data:{
-                email,
-                name,
-                // password: hashedPassword,
-                role: "USER",
-            },
-        });
-        return {success: true};
-    }catch(error){
-        console.error("Error registering user:", error);
-        return {error: "User already exists"};
-    }
-}   
+    // 2. Security: Hash password (12 rounds)
+    const hashedPassword = await hash(password, 12);
+
+    // 3. Database: Save user
+    await prisma.user.create({
+        data: {
+            email,
+            name: formData.get("name") as string,
+            password: hashedPassword,
+        },
+    });
+
+    return { success: true };
+}
